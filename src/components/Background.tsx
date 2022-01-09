@@ -1,6 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import { useStyles } from "./Background.styles";
+import { useStyles } from "./styles/Background.styles";
+import { BackgroundProps2 } from './types/common';
 import {
   calcMoveTriangleTo,
   calcMoveTriangleTo2,
@@ -8,31 +9,23 @@ import {
   calcMoveBackgroundTo,
 } from "../utils/movementBehaviour";
 import { changeColour, colorTriangle, colorBackground } from "../utils/backgroundColourChange";
+import difference from '../utils/difference';
 
-function difference(a: number, b: number) {
-  return Math.abs(a - b);
-}
 
-interface BackgroundProps {
-  index: number;
-  prevIndex: number;
-  setPrevIndex: (index: number) => void;
-  forwardDirection: boolean;
-}
 
-export default function Background(props: BackgroundProps) {
+export default function Background(props: BackgroundProps2) {
   const { index, prevIndex, setPrevIndex, forwardDirection } = props;
   let movingTriangle = useRef<HTMLInputElement | null>(null);
   let movingBackground = useRef<HTMLInputElement | null>(null);
   let tl = gsap.timeline();
-  const movementEase = "back.out(1.6)";
-  const duration = 2.5;
   const [prevBackgroundState, setPrevBackgroundIndex] = useState(0);
   const [prevPosition, setPrevPosition] = useState(100);
   const [triangleColor, setTriangleColor] = useState(colorTriangle[0]);
   const [movingBackgroundColor, setMovingBackgroundColor] = useState(colorBackground[0]);
   const [staticBackgroundColor, setStaticBackgroundColor] = useState(colorBackground[0]);
-
+  const movementEase = "back.out(1.6)";
+  const duration = 2.5;
+  
   const classes = useStyles({
     triangleColor,
     movingBackgroundColor,

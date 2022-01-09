@@ -5,22 +5,16 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { isMobile } from "react-device-detect";
-import { Component } from './types/common';
-import { useStyles } from "./MenuItems.styles";
+import { MenuItemsProps, Component } from './types/common';
+import { useStyles } from "./styles/MenuItems.styles";
 
-interface MenuItems {
-  components: Component[];
-  pageIndex: number;
-  setPageIndex: (index: number) => void;
-};
-
-export default function MenuItems(props: MenuItems) {
+export default function MenuItems(props: MenuItemsProps) {
   const { components, pageIndex, setPageIndex } = props;
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
 
-  const handleClick = (event: any) => { // fix
+  const handleClick = (event: any) => {
     setAnchorEl(event.currentTarget);
   };
 

@@ -3,7 +3,7 @@ import gsap from "gsap";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Box from "@mui/material/Box";
 import { SwipeIndicatorProps } from "./types/common";
-import { useStyles } from "./SwipeIndicator.styles";
+import { useStyles } from "./styles/SwipeIndicator.styles";
 
 function SwipeIndicator(props: SwipeIndicatorProps) {
   const { pageIndex, componentsLength } = props;

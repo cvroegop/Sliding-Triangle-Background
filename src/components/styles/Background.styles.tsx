@@ -1,5 +1,5 @@
 import { makeStyles } from "@mui/styles";
-import { BackgroundProps } from "./types/common";
+import { BackgroundProps } from "../types/common";
 
 export const useStyles = makeStyles({
   staticBackground: {

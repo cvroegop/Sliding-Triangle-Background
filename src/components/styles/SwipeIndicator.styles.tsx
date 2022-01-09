@@ -1,5 +1,5 @@
 import { makeStyles } from "@mui/styles";
-import { SwipeIndicatorProps } from './types/common';
+import { SwipeIndicatorProps } from '../types/common';
 
 export const useStyles = makeStyles({
     arrowContainer: {

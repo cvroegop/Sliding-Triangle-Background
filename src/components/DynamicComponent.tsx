@@ -1,29 +1,10 @@
 import React, { useEffect, useState } from "react";
-import makeStyles from '@mui/styles/makeStyles';
+import { useStyles } from "./styles/DynamicComponent.styles";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { Component } from './types/common';
+import { DynamicComponentProps, Component } from './types/common';
 
-interface ComponentProps {
-    className: string
-    pageIndex: number;
-    delay: number;
-    components: Component[];
-}
-
-export const useStyles = makeStyles({
-    titleMargins: {
-      margin: "5% 0"
-    },
-    ParagraphMargins: {
-        margin: "5% 0",
-        ["@media (max-width:1000px)"]: {
-          maxWidth: "0 10%",
-        },
-      },
-  });
-
-function DynamicComponent(props: ComponentProps) {
+function DynamicComponent(props: DynamicComponentProps) {
   const classes = useStyles();
   const { pageIndex, delay, components } = props;
   const [currentComponent, setCurrentComponent] = useState<Component>(components[pageIndex])

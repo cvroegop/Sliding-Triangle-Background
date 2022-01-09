@@ -1,0 +1,6 @@
+export const components = [
+    { _id: "02ijfo0i2jifj2wklds", name: "page_1", menuName: "Page 1", title: "Some interesting information about X", paragraph: "Entire any had depend and figure winter. Change stairs and men likely wisdom new happen piqued six. Now taken him timed sex world get. Enjoyed married an feeling delight pursuit as offered. As admire roused length likely played pretty to no. Means had joy miles her merry solid order." },
+    { _id: "3iojwfji20i3efdjkfv", name: "page_2", menuName: "Page 2", title: "Some interesting information about Y", paragraph: "Demesne far hearted suppose venture excited see had has. Dependent on so extremely delivered by. Yet ﻿no jokes worse her why. Bed one supposing breakfast day fulfilled off depending questions. Whatever boy her exertion his extended. Ecstatic followed handsome drawings entirely mrs one yet outweigh. Of acceptance insipidity remarkably is invitation." },
+    { _id: "239feowfi023fw30f39", name: "page_3", menuName: "Page 3", title: "Some interesting information about Z", paragraph: "It if sometimes furnished unwilling as additions so. Blessing resolved peculiar fat graceful ham. Sussex on at really ladies in as elinor. Sir sex opinions age properly extended. Advice branch vanity or do thirty living. Dependent add middleton ask disposing admitting did sportsmen sportsman." },
+  ];
+  
