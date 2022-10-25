@@ -16,7 +16,7 @@ It is easy to modify certain elements to change the behaviour of the background 
 **npm start** Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-**For a live demo** check out: [demo](https://sliding-triangle-background.herokuapp.com/)
+**For a live demo** check out: [demo](https://codesandbox.io/s/sliding-triangle-background-nhem54)
 
 ## Free to use
 
